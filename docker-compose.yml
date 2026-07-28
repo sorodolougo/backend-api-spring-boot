@@ -1,0 +1,24 @@
+services:
+  version: '3.8'
+
+  services:
+    postgres-db:
+      image: postgres:16-alpine
+      container_name: gescom-postgres
+      environment:
+        POSTGRES_DB: gescom_db
+        POSTGRES_USER: senior_dev
+        POSTGRES_PASSWORD: MyUltraSecurePassword2026
+      ports:
+        - "5432:5432"
+      volumes:
+        - pgdata:/var/lib/postgresql/data
+      networks:
+        - gescom-network
+
+  volumes:
+    pgdata:
+
+  networks:
+    gescom-network:
+      driver: bridge
