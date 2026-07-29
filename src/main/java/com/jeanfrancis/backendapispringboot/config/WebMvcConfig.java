@@ -25,7 +25,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/v1/**") // S'applique à tous les endpoints de l'API
-                .allowedOrigins("http://localhost:4200") // Autorise uniquement ton serveur Angular
+                .allowedOrigins("https://soro-gescom.vercel.app") // Autorise uniquement ton serveur Angular
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Autorise tous les verbes CRUD
                 .allowedHeaders("*") // Autorise tous les types de headers HTTP (Authorization, Content-Type, etc.)
                 .allowCredentials(true) // Crucial si tu ajoutes plus tard la gestion des cookies/sessions HTTP
