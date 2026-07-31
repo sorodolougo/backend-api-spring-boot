@@ -1,3 +1,14 @@
+/**
+ * ====================================================================================
+ * ROLE : COEUR LOGIQUE DU DOMAINE / SERVICE IMPLEMENTATION
+ * RESPONSIBILITY : Exécute les deux règles d'or de ton entreprise : la génération
+ * automatique du Code Client (CLI0001) et le blocage strict des doublons.
+ * ARCHITECTURE : Sécurisé par @Transactional pour garantir la cohérence en cas de crash.
+ * ====================================================================================
+ */
+
+
+
 package com.jeanfrancis.backendapispringboot.domain.customer.service;
 
 import com.jeanfrancis.backendapispringboot.domain.customer.model.Customer;

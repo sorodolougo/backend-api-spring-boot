@@ -1,3 +1,13 @@
+/**
+ * ====================================================================================
+ * ROLE : MODÈLE DE DONNÉES / ENTITÉ JPA (DOMAINE CLIENT)
+ * RESPONSIBILITY : Cartographie la structure de la table "customers" dans PostgreSQL.
+ * Elle encapsulate l'identité et les coordonnées d'un tiers (Quincaillerie, Supermarché...).
+ * ARCHITECTURE : Utilise les validations Jakarta pour garantir l'intégrité avant écriture.
+ * ====================================================================================
+ */
+
+
 package com.jeanfrancis.backendapispringboot.domain.customer.model;
 
 import jakarta.persistence.*;

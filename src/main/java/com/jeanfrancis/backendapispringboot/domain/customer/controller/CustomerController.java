@@ -1,3 +1,14 @@
+/**
+ * ====================================================================================
+ * ROLE : POINT D'ENTRÉE DE L'API / REST CONTROLLER LAYER
+ * RESPONSIBILITY : Ouvre les vannes du serveur pour écouter ton application Angular.
+ * Intercepte les requêtes HTTP (GET, POST, PUT, DELETE) et les transforme en JSON propre.
+ * ARCHITECTURE : Centralise le routage sur /api/v1/customers et alimente le Swagger Cloud.
+ * ====================================================================================
+ */
+
+
+
 package com.jeanfrancis.backendapispringboot.domain.customer.controller;
 
 import com.jeanfrancis.backendapispringboot.domain.customer.model.Customer;

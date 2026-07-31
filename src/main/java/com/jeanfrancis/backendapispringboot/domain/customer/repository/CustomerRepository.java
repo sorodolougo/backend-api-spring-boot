@@ -1,3 +1,14 @@
+/**
+ * ====================================================================================
+ * ROLE : PASSERELLE D'ACCÈS AUX DONNÉES / REPOSITORY LAYER
+ * RESPONSIBILITY : Gère les requêtes SQL en tâche de fond sur ton PostgreSQL Cloud (Neon).
+ * Fournit les fonctions natives de recherche (Sélection, Insertion, Suppression).
+ * ARCHITECTURE : Hérite de JpaRepository pour automatiser la persistance sans écrire de SQL.
+ * ====================================================================================
+ */
+
+
+
 package com.jeanfrancis.backendapispringboot.domain.customer.repository;
 
 import com.jeanfrancis.backendapispringboot.domain.customer.model.Customer;
