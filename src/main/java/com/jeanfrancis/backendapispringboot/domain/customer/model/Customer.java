@@ -24,7 +24,7 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Le code client est obligatoire")
+
     @Column(unique = true, nullable = false, length = 20)
     private String customerCode; // Codification d'entreprise unique (ex: CLI-2026-001)
 
