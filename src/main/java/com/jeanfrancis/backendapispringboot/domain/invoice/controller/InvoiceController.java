@@ -80,4 +80,15 @@ public class InvoiceController {
         Invoice invoice = invoiceService.getInvoiceById(id);
         return ResponseEntity.ok(invoice);
     }
+
+    /**
+     * GET /api/v1/invoices/customer/{customerId}
+     * Récupère le grand livre des ventes filtré pour un client spécifique.
+     */
+    @GetMapping("/customer/{customerId}")
+    public ResponseEntity<List<Invoice>> getInvoicesByCustomerId(@PathVariable Long customerId) {
+        List<Invoice> invoices = invoiceService.getInvoicesByCustomerId(customerId);
+        return ResponseEntity.ok(invoices);
+    }
+
 }

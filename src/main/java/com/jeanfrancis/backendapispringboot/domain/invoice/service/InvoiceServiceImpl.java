@@ -118,4 +118,12 @@ public class InvoiceServiceImpl implements InvoiceService {
                         org.springframework.http.HttpStatus.NOT_FOUND, "La facture ID " + id + " est introuvable."
                 ));
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Invoice> getInvoicesByCustomerId(Long customerId) {
+        return invoiceRepository.findByCustomerIdWithLines(customerId);
+    }
+
+
 }

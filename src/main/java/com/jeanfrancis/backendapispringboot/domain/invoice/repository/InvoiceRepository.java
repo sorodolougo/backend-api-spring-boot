@@ -48,4 +48,17 @@ public interface InvoiceRepository extends JpaRepository<Invoice, Long> {
             "LEFT JOIN FETCH i.invoiceLines " +
             "WHERE i.id = :id")
     Optional<Invoice> findByIdWithLinesAndCustomer(@Param("id") Long id);
+
+    /**
+     * ⚡ OPTIMISATION PERFORMANCE : Extrait l'historique d'achat complet d'un client unique
+     * avec le détail de ses lignes en une seule requête SQL par jointure.
+     * @param customerId L'identifiant technique du tiers client
+     */
+    @Query("SELECT DISTINCT i FROM Invoice i " +
+            "LEFT JOIN FETCH i.invoiceLines " +
+            "WHERE i.customer.id = :customerId " +
+            "ORDER BY i.createdAt DESC") // Les factures les plus récentes s'affichent en premier
+    List<Invoice> findByCustomerIdWithLines(@Param("customerId") Long customerId);
+
+
 }

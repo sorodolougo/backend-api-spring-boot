@@ -32,4 +32,7 @@ public interface InvoiceService {
      * Récupère une facture par son ID pour inspection.
      */
     Invoice getInvoiceById(Long id);
+
+    List<Invoice> getInvoicesByCustomerId(Long customerId);
+
 }
